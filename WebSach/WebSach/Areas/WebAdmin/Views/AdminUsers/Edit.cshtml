@@ -1,16 +1,40 @@
-﻿@model WebSach.Models.User
+@model WebSach.Models.User
 
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Areas/WebAdmin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Edit</h2>
+<style>
+    form {
+        background-color: #c0d399;
+        width: 700px;
+        border: 1px solid green;
+        padding: 20px;
+        margin: 0 auto;
+        font-weight: normal;
+    }
+
+    input {
+        width: 80%;
+        padding: 10px 0;
+    }
+
+        input[type="submit" i] {
+            background-color: #8CA55A;
+        }
+
+    .btn-success {
+        color: #fff;
+        background-color: #5cb85c;
+        border-color: #4cae4c;
+    }
+</style>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>User</h4>
         <hr />
